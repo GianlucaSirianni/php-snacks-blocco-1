@@ -28,11 +28,10 @@ $array = [
 
 <?php
 
-for($i=0; $i<count($array); $i++){
-    echo $array[$i]['name'];
-    for($n=0; $n<count($array[$i]['vote']); $n++){
-        echo $n;
-    };
+foreach($array as $value){
+    echo $value['name'];
+    echo $value['lastname'];
+    echo array_sum($value['vote']) / count($value['vote']) . '<br/>';
 }
 
 ?>
